@@ -14,3 +14,9 @@ ZONE_NAME=$(expr match "$CERTBOT_DOMAIN" '.*\.\(.*\..*\)')
 if [ -z "$ZONE_NAME" ]; then
   ZONE_NAME="$CERTBOT_DOMAIN"
 fi
+
+# get the Ionos zone id
+ZONE_RESPONSE=$(curl -s -X GET "$API_URL/zones" \
+                     -H "$API_KEY_HEADER" \
+                     -H "Accept: application/json")
+ZONE_ID=$(echo $ZONE_RESPONSE | jq -r .[].id)
