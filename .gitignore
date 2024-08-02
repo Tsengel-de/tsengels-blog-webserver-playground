@@ -2,5 +2,6 @@
 # ignore all sensible text files in path
 
 ssl-cert-renewal/*.txt
+ddns-and-webserver/*.txt
 .idea
 
