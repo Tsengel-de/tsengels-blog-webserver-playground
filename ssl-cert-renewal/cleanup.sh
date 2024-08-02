@@ -18,3 +18,10 @@ if [ -f /tmp/CERTBOT_$CERTBOT_DOMAIN ]; then
     RECORD_IDS=$(echo $RECORD_GET_RESPONSE \
             | python -c "import sys,json;records=json.load(sys.stdin)['records'];print('\n'.join([x['id'] for x in records]))")
 fi
+
+# Remove the challenge TXT record from the zone
+if [ -n "$ZONE_ID" -a -n "$RECORD_IDS" ]; then
+    echo "$RECORD_IDS" \
+    | xargs -n1 -I {} curl -s -X DELETE "$API_URL/zones/$ZONE_ID/records/{}" \
+            -H "$API_KEY_HEADER"
+fi
