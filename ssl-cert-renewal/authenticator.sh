@@ -7,6 +7,8 @@ set -a
 . ./env.txt
 set +a
 
+sudo apt install jq
+
 # strip only the top domain to get the zone id
 ZONE_NAME=$(expr match "$CERTBOT_DOMAIN" '.*\.\(.*\..*\)')
 
