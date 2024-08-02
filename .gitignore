@@ -1,4 +1,6 @@
 # add files to be ignored in repo update
 # ignore all sensible text files in path
+
 ssl-cert-renewal/*.txt
+.idea
 
