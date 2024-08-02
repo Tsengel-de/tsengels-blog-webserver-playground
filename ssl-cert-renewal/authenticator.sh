@@ -29,3 +29,9 @@ RECORD_CREATE_RESPONSE=$(curl -s -X POST "$API_URL/zones/$ZONE_ID/records" \
                               -H "$API_KEY_HEADER" \
                               -H "Content-Type: application/json" \
                               --data '[{"name": "'"$CREATE_DOMAIN"'", "type": "TXT", "content": "'"$CERTBOT_VALIDATION"'", "ttl": 3600, "prio": 100, "disabled": false}]')
+
+# Save info for cleanup
+echo $ZONE_ID > /tmp/CERTBOT_$CERTBOT_DOMAIN
+
+# Sleep to make sure the change has time to propagate over to DNS
+sleep 25
