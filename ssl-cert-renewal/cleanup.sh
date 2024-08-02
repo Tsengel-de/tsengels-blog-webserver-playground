@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# install python before use this script
 
 # activate log in cli
 set -x
