@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # activate log in cli
-set -x
+# set -x
 
 set -a
 . ./env.txt
