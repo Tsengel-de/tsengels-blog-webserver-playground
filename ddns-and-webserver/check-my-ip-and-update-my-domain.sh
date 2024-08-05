@@ -24,3 +24,4 @@ if [ $NEW_IP != $OLD_IP ];
   # update ip in ip.txt
   echo $NEW_IP > ip.txt
 fi
+
