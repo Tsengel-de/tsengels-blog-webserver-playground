@@ -2,6 +2,7 @@
 
 # we need to install dnsutils for checking our wan ip
 # sudo apt install dnsutils
+
 # your ssh-pub-key must be added in your router settings
 
 # read file and export environment variables
