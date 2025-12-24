@@ -1,44 +1,8 @@
 # Network Architecture
 
-```mermaid
-graph TB
-    subgraph Internet
-        Client[Client Browser]
-        LetsEncrypt[Let's Encrypt CA]
-        IONOS_DNS[IONOS DNS Server]
-    end
-    
-    subgraph Home Network 192.168.88.x
-        Router[Mikrotik Router]
-        RaspberryPi[Raspberry Pi<br/>192.168.88.123]
-        
-        subgraph Services on Pi
-            Nginx[Nginx<br/>:443]
-            Grav[Grav CMS]
-            Certbot[Certbot]
-            DDNSScript[DDNS Script]
-        end
-    end
-    
-    Client -->|HTTPS| Router
-    Router -->|Port 443 NAT| Nginx
-    Nginx --> Grav
-    
-    DDNSScript -->|1. Check WAN IP| OpenDNS[OpenDNSResolver]
-    DDNSScript -->|2. Update NAT Rules| Router
-    DDNSScript -->|3. Update DNS| IONOS_DNS
-    
-    Certbot -->|DNS-01 Challenge| LetsEncrypt
-    Certbot -->|Create/Delete TXT Records| IONOS_DNS
-    LetsEncrypt -->|Verify TXT Records| IONOS_DNS
-    Certbot -->|Renew Certificate| Nginx
-    
-    style RaspberryPi fill:#1976d2,stroke:#0d47a1,stroke-width:2px,color:#fff
-    style Router fill:#f57c00,stroke:#e65100,stroke-width:2px,color:#fff
-    style Nginx fill:#388e3c,stroke:#1b5e20,stroke-width:2px,color:#fff
-    style Certbot fill:#c2185b,stroke:#880e4f,stroke-width:2px,color:#fff
-    style DDNSScript fill:#5e35b1,stroke:#311b92,stroke-width:2px,color:#fff
-```
+
+![Network Architecture Diagram](network-diagram.png)
+
 
 ## Components
 
