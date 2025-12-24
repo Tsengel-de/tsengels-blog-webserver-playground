@@ -1,30 +1,37 @@
-## Цэнгэлийн блогны тоглоомын талбарт тавтай морил, 👨🏼‍🚀
+# Төслийн хураангуй: tsengels-blog-webserver-playground
 
-```
-# Edit this file to introduce tasks to be run by cron.
-#
-# Each task to run has to be defined through a single line
-# indicating with different fields when the task will be run
-# and what command to run for the task
-#
-# To define the time you can provide concrete values for
-# minute (m), hour (h), day of month (dom), month (mon),
-# and day of week (dow) or use '*' in these fields (for 'any').
-#
-# Notice that tasks will be started based on the cron's system
-# daemon's notion of time and timezones.
-#
-# Output of the crontab jobs (including errors) is sent through
-# email to the user the crontab file belongs to (unless redirected).
-#
-# For example, you can run a backup of all your user accounts
-# at 5 a.m every week with:
-# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
-#
-# For more information see the manual pages of crontab(5) and cron(8)
-#
-# m h  dom mon dow   command
-* * * * * cd /home/pi/www/grav;/usr/bin/php bin/grav scheduler 1>> /dev/null 2>&1
-0 0 1,15 * * sudo certbot certonly -n -a manual --manual-auth-hook /home/pi/tsengels-blog-webserver-playground/ssl-cert-renewal/authenticator.sh --manual-cleanup-hook /home/pi/tsengels-blog-webserver-playground/ssl-cert-renewal/cleanup.sh -d *.tsengel.de
-*/1 * * * * /bin/bash -c "/home/pi/tsengels-blog-webserver-playground/ddns-and-webserver/check-my-ip-and-update-my-domain.sh"
-```
+Энэхүү төсөл нь гэрийн вэб серверийг арчлахад зориулагдсан автоматжуулалтын скриптүүдийн цуглуулга бөгөөд ялангуяа Dynamic DNS (DDNS) шинэчлэлт болон IONOS API ашиглан SSL сертификат сунгах ажлыг гүйцэтгэнэ.
+
+## Үндсэн бүрэлдэхүүн хэсгүүд
+
+### 1. DDNS ба Сүлжээний тохиргоо (`ddns-and-webserver/`)
+Энэ хэсэг нь гэрийн сүлжээг гаднаас хандах боломжтой, чиглүүлэлт зөв хийгдсэн эсэхийг баталгаажуулна.
+- **`check-my-ip-and-update-my-domain.sh`**:
+    - **Wan IP шалгах**: OpenDNS-рүү хандаж одоогийн гадаад IP хаягийг олно.
+    - **Роутерын тохиргоо**: **Mikrotik Chateau 5g ax** роутер руу SSH-ээр холбогдож вэб сервер рүү чиглэсэн NAT/Port Forwarding дүрмүүдийг (Port 443) шинэчилнэ.
+    - **DNS шинэчлэлт**: **IONOS** API ашиглан DNS бичлэгийг шинэчилнэ.
+    - **Төлөв хяналт**: Одоогийн IP хаягийг `ip.txt` файлд хадгалж, илүүц шинэчлэлт хийхээс сэргийлнэ.
+
+### 2. SSL Сертификат Сунгалт (`ssl-cert-renewal/`)
+Энэ хэсэг нь **Certbot** болон DNS-01 баталгаажуулалт ашиглан SSL сертификатуудыг удирдана.
+- **`authenticator.sh`**: Certbot-ын гар аргаар баталгаажуулах хук (hook).
+    - Домэйн нэрийн IONOS Zone ID-г олно.
+    - IONOS API ашиглан `_acme-challenge` TXT бичлэгийг үүсгэнэ.
+    - Бичлэг тархтал хүлээнэ.
+- **`cleanup.sh`**: Certbot-ын цэвэрлэгээ хийх хук.
+    - Баталгаажуулалт дууссаны дараа `_acme-challenge` TXT бичлэгийг устгана.
+    - JSON боловсруулахад `jq` болон `python` ашиглана.
+- **`certbot_force_renewal.sh`**:
+    - Certbot сунгалтыг албадан эхлүүлнэ.
+    - Амжилттай болсон тохиолдолд **Nginx**-ийг дахин ачаална.
+
+## Технологийн стекийн хамаарал
+
+- **Shell**: Bash скриптүүд нь үндсэн ажлыг гүйцэтгэнэ.
+- **Сүлжээ**: `dig` (dnsutils), `curl`, `ssh`.
+- **Өгөгдөл боловсруулалт**: `jq` (JSON процессор), `python` (цэвэрлэгээний скриптэд ашиглагдана).
+- **Үйлчилгээнүүд**:
+    - **IONOS API**: DNS удирдлагад.
+    - **Mikrotik RouterOS**: Дотоод сүлжээний чиглүүлэлтэд.
+    - **Certbot**: Let's Encrypt сертификатад.
+    - **Nginx**: Удирдаж буй вэб сервер.
