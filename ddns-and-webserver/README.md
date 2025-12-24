@@ -35,3 +35,6 @@ This component manages SSL certificates using **Certbot** with DNS-01 validation
     - **Mikrotik RouterOS**: For local network routing.
     - **Certbot**: For Let's Encrypt certificates.
     - **Nginx**: The web server being managed.
+
+## Verified Deployment
+Confirmed working on production server `192.168.88.123` with user `pi`.

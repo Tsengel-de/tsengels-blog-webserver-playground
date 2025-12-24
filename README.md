@@ -34,3 +34,10 @@ This component manages SSL certificates using **Certbot** with DNS-01 validation
     - **Mikrotik RouterOS**: For local network routing.
     - **Certbot**: For Let's Encrypt certificates.
     - **Nginx**: The web server being managed.
+
+## Verified Deployment
+This configuration has been verified on the production server:
+- **Server IP**: `192.168.88.123`
+- **User**: `pi`
+- **Webroot**: `/home/pi/www/grav`
+- **Project Path**: `/home/pi/tsengels-blog-webserver-playground`
