@@ -35,3 +35,6 @@
     - **Mikrotik RouterOS**: Дотоод сүлжээний чиглүүлэлтэд.
     - **Certbot**: Let's Encrypt сертификатад.
     - **Nginx**: Удирдаж буй вэб сервер.
+
+## Verified Deployment (Баталгаажсан байршуулалт)
+Confirmed working on production server `192.168.88.123` with user `pi`.
