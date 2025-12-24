@@ -38,3 +38,6 @@
 
 ## Verified Deployment (Баталгаажсан байршуулалт)
 Confirmed working on production server `192.168.88.123` with user `pi`.
+
+## Network Architecture (Сүлжээний бүтэц)
+Сүлжээний бүтцийн диаграммыг эндээс харна уу: [Network Diagram](network_diagram.drawio)
