@@ -1,8 +1,3 @@
-# tsengels-blog-webserver-playground
-Just for fun and testing,scripting and automating stuff ...
-diese scheiß windoof
-testing ssh connection to github repo
-
 # Project Summary: tsengels-blog-webserver-playground
 This project is a collection of automation scripts designed to maintain a home web server, specifically handling Dynamic DNS (DDNS) updates and SSL certificate renewals via the IONOS API.
 ## Key Components
