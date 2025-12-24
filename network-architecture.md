@@ -9,14 +9,14 @@ graph TB
     end
     
     subgraph Home Network 192.168.88.x
-        Router[Mikrotik Chateau 5G AX<br/>Router]
+        Router[Mikrotik Router]
         RaspberryPi[Raspberry Pi<br/>192.168.88.123]
         
         subgraph Services on Pi
-            Nginx[Nginx Web Server<br/>:443]
-            Grav[Grav CMS<br/>/home/pi/www/grav]
-            Certbot[Certbot SSL Manager]
-            DDNSScript[DDNS Update Script<br/>check-my-ip-and-update-my-domain.sh]
+            Nginx[Nginx<br/>:443]
+            Grav[Grav CMS]
+            Certbot[Certbot]
+            DDNSScript[DDNS Script]
         end
     end
     
