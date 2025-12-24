@@ -71,7 +71,7 @@ graph TB
 5. Certbot IONOS API-аар TXT бичлэгийг цэвэрлэнэ
 
 ### 3. Хэрэглэгчийн хандалт
-1. Хэрэглэгч `https://yourdomain.com` хандана
+1. Хэрэглэгч `https://blog.tsengel.de/mn` хандана
 2. DNS одоогийн WAN IP руу чиглүүлнэ (IONOS-оор)
 3. Роутер :443 портыг Raspberry Pi руу дамжуулна
 4. Nginx Grav CMS-аас контент үзүүлнэ

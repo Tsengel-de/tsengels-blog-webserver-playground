@@ -71,7 +71,7 @@ graph TB
 5. Certbot cleans up TXT record via IONOS API
 
 ### 3. Client Access
-1. Client requests `https://yourdomain.com`
+1. Client requests `https://blog.tsengel.de/en`
 2. DNS resolves to current WAN IP (via IONOS)
 3. Router forwards :443 to Raspberry Pi
 4. Nginx serves content from Grav CMS
