@@ -40,4 +40,4 @@ This component manages SSL certificates using **Certbot** with DNS-01 validation
 Confirmed working on production server `192.168.88.123` with user `pi`.
 
 ## Network Architecture
-See [Network Diagram](../network_diagram.drawio) for a visual overview.
+See [Network Architecture](../network-architecture.md) for a visual overview.

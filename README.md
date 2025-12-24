@@ -43,5 +43,6 @@ This configuration has been verified on the production server:
 - **Project Path**: `/home/pi/tsengels-blog-webserver-playground`
 
 ## Network Architecture
-A visual representation of the network setup can be found here: [Network Diagram](network_diagram.drawio)
+A visual representation of the network setup can be found here: [Network Architecture](network-architecture.md)
+
 

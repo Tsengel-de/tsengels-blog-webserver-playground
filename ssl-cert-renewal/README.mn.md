@@ -40,4 +40,4 @@
 Confirmed working on production server `192.168.88.123` with user `pi`.
 
 ## Network Architecture (Сүлжээний бүтэц)
-Сүлжээний диаграммыг үзэх: [Network Diagram](../network_diagram.drawio)
+Сүлжээний диаграммыг үзэх: [Network Architecture](../network-architecture.md)
