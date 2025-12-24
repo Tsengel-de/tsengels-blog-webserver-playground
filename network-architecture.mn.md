@@ -33,11 +33,11 @@ graph TB
     LetsEncrypt -->|Verify TXT Records| IONOS_DNS
     Certbot -->|Renew Certificate| Nginx
     
-    style RaspberryPi fill:#e1f5fe
-    style Router fill:#fff3e0
-    style Nginx fill:#c8e6c9
-    style Certbot fill:#f8bbd0
-    style DDNSScript fill:#d1c4e9
+    style RaspberryPi fill:#1976d2,stroke:#0d47a1,stroke-width:2px,color:#fff
+    style Router fill:#f57c00,stroke:#e65100,stroke-width:2px,color:#fff
+    style Nginx fill:#388e3c,stroke:#1b5e20,stroke-width:2px,color:#fff
+    style Certbot fill:#c2185b,stroke:#880e4f,stroke-width:2px,color:#fff
+    style DDNSScript fill:#5e35b1,stroke:#311b92,stroke-width:2px,color:#fff
 ```
 
 ## Бүрэлдэхүүн хэсгүүд
