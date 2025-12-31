@@ -21,9 +21,12 @@ This component manages SSL certificates using **Certbot** with DNS-01 validation
 - **`cleanup.sh`**: A Certbot manual cleanup hook.
     - Removes the `_acme-challenge` TXT record after validation.
     - Uses both `jq` and `python` for JSON parsing.
-- **`certbot_force_renewal.sh`**:
     - Triggers a forced Certbot renewal.
     - Reloads **Nginx** upon success.
+- **`sync-cluster-certs.sh`**:
+    - **Purpose**: Copies renewed certificates to the **Pi Cluster** (Master Node `10.0.0.14`).
+    - **Usage**: Run via Cron (e.g., weekly) or as a Certbot deploy hook.
+    - **Requirements**: Needs passwordless SSH access (`ssh-copy-id tsengel@10.0.0.14`) and a static route to `10.0.0.0/24`.
 
 ## Technology Stack & Dependencies
 
