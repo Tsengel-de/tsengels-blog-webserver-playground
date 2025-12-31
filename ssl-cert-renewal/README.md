@@ -11,6 +11,10 @@ This component ensures the home network is accessible and correctly routed.
     - **Router Configuration**: Connects to a **Mikrotik Chateau 5g ax** router via SSH to update NAT/Port Forwarding rules (Port 443) to the webserver.
     - **DNS Update**: Updates the DNS recordat **IONOS** via their API.
     - **State Tracking**: Stores the current IP in `ip.txt` to avoid unnecessary updates.
+- **`setup-mikrotik-forwarding.sh`**:
+    - **Purpose**: Configures MikroTik Router for Cluster Access (Port 8443).
+    - **Features**: Sets up Destination NAT (WAN access), Hairpin NAT (WiFi access), and Firewall allow rules.
+    - **Usage**: Run once to provision the router.
 
 ### 2. SSL Certificate Renewal (`ssl-cert-renewal/`)
 This component manages SSL certificates using **Certbot** with DNS-01 validation.
