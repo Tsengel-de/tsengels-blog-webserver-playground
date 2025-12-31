@@ -51,3 +51,28 @@ Confirmed working on production server `192.168.88.123` with user `pi`.
 
 ## Network Architecture
 See [Network Architecture](../network-architecture.md) for a visual overview.
+
+## 🛠️ Setup & Installation Guide
+
+### 1. Enable Passwordless Access
+The webserver needs to SSH into the cluster without a password to run the update command.
+
+```bash
+# 1. Generate SSH Key (Press Enter for default file, leave passphrase EMPTY for automation)
+ssh-keygen -t ed25519
+
+# 2. Copy ID to Cluster Master (It will ask for tsengel's password once)
+ssh-copy-id tsengel@10.0.0.14
+```
+
+### 2. Configure Network
+Ensure the webserver can reach the cluster network.
+```bash
+sudo ip route add 10.0.0.0/24 via 192.168.88.150
+```
+
+### 3. Automate with Cron
+Run `crontab -e` and add this line to sync every Monday at 3am:
+```cron
+0 3 * * 1 /home/pi/repos/tsengels-blog-webserver-playground/ssl-cert-renewal/sync-cluster-certs.sh >> /tmp/cert-sync.log 2>&1
+```
