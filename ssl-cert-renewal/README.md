@@ -31,6 +31,9 @@ This component manages SSL certificates using **Certbot** with DNS-01 validation
     - **Purpose**: Copies renewed certificates to the **Pi Cluster** (Master Node `10.0.0.14`).
     - **Usage**: Run via Cron (e.g., weekly) or as a Certbot deploy hook.
     - **Requirements**: Needs passwordless SSH access (`ssh-copy-id tsengel@10.0.0.14`) and a static route to `10.0.0.0/24`.
+        ```bash
+        sudo ip route add 10.0.0.0/24 via 192.168.88.150
+        ```
 
 ## Technology Stack & Dependencies
 
