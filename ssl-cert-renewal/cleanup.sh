@@ -1,28 +1,31 @@
 #!/usr/bin/env bash
-# install python before use this script
 
-# activate log in cli
-# set -x
+# Fixed Cleanup
+ENV_FILE="/home/pi/tsengels-blog-webserver-playground/ssl-cert-renewal/env.txt"
 
-API_URL="https://api.hosting.ionos.com/dns/v1"
-API_KEY_HEADER="X-API-Key: $API_KEY"
+set -a
+. "$ENV_FILE"
+set +a
 
-if [ -f /tmp/CERTBOT_$CERTBOT_DOMAIN ]; then
-    ZONE_ID=$(cat /tmp/CERTBOT_$CERTBOT_DOMAIN)
-    rm -f /tmp/CERTBOT_$CERTBOT_DOMAIN
+if [ -f "/tmp/CERTBOT_$CERTBOT_DOMAIN" ]; then
+    ZONE_ID=$(cat "/tmp/CERTBOT_$CERTBOT_DOMAIN")
+    rm -f "/tmp/CERTBOT_$CERTBOT_DOMAIN"
 
     CREATE_DOMAIN="_acme-challenge.$CERTBOT_DOMAIN"
-    # request the created records
-    RECORD_GET_RESPONSE=$(curl -s -X GET "$API_URL/zones/$ZONE_ID?recordName=$CREATE_DOMAIN&recordType=TXT" \
-                             -H "$API_KEY_HEADER" \
-                             -H "Accept: application/json")
-    RECORD_IDS=$(echo $RECORD_GET_RESPONSE \
-            | python -c "import sys,json;records=json.load(sys.stdin)['records'];print('\n'.join([x['id'] for x in records]))")
-fi
 
-# Remove the challenge TXT record from the zone
-if [ -n "$ZONE_ID" -a -n "$RECORD_IDS" ]; then
-    echo "$RECORD_IDS" \
-    | xargs -n1 -I {} curl -s -X DELETE "$API_URL/zones/$ZONE_ID/records/{}" \
-            -H "$API_KEY_HEADER"
+    # Get all matching TXT record IDs using jq
+    RECORD_IDS=$(curl -s -X GET "$API_URL/zones/$ZONE_ID?recordName=$CREATE_DOMAIN&recordType=TXT" \
+                 -H "X-API-Key: $API_KEY" \
+                 -H "Accept: application/json" | jq -r '.records[].id')
+
+    # Delete each record
+    if [ -n "$RECORD_IDS" ] && [ "$RECORD_IDS" != "null" ]; then
+        echo "$RECORD_IDS" | while read -r RECORD_ID; do
+            echo "Deleting TXT record: $RECORD_ID"
+            curl -s -X DELETE "$API_URL/zones/$ZONE_ID/records/$RECORD_ID" \
+                 -H "X-API-Key: $API_KEY"
+        done
+    else
+        echo "No TXT records to clean up"
+    fi
 fi
