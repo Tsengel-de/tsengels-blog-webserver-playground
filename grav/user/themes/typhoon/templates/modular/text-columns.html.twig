@@ -1,0 +1,23 @@
+{% extends 'modular/partials/base.html.twig' %}
+
+{% set column_count = page.header.columns ?: 3 %}
+
+{% if column_count == 2 %}
+  {% set column_classes = 'columns-lg' %}
+{% elseif column_count == 3 %}
+  {% set column_classes = 'columns-sm' %}
+{% elseif column_count >= 4 %}
+  {% set column_classes = 'columns-2xs' %}
+{% else %}
+  {% set column_classes = '' %}
+{% endif %}
+
+{% block module_content %}
+  <div class="">
+    {% include 'modular/partials/title.html.twig' with {include_content: false} %}
+
+    <div class="{{ prose_style }} {{ column_classes }} sm:gap-6 lg:gap-10">
+      {{ page.content|raw }}
+    </div>
+  </div>
+{% endblock %}

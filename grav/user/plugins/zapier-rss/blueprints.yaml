@@ -1,0 +1,78 @@
+name: Zapier RSS
+slug: zapier-rss
+type: plugin
+premium: true
+version: 1.0.0
+description: Plugin to integrate Zapier with Grav via customized RSS feeds
+icon: bolt
+author:
+  name: Trilby Media, LLC
+  email: hello@trilby.media
+homepage: https://getgrav.org/premium/site-toolbox#zapier-rss
+keywords: grav, zapier, rss
+bugs: https://github.com/getgrav/grav-premium-issues/issues?q=label:site-toolbox+label:zapier-rss
+docs: https://getgrav.org/premium/site-toolbox/docs#zapier-rss
+license: https://getgrav.org/premium/license
+
+dependencies:
+  - { name: grav, version: '>=1.6.30' }
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    active:
+      type: toggle
+      label: Default active state
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    template:
+      type: text
+      label: Default template
+      placeholder: zapier-feed.zrss.twig
+      size: medium
+
+    limit:
+      type: text
+      label: Number of items
+      size: small
+      validate:
+        type: integer
+
+    length:
+      type: text
+      label: Max length of content
+      size: small
+      validate:
+        type: integer
+
+    description:
+      type: textarea
+      label: Description
+      rows: 5
+
+    order.by:
+      type: text
+      label: Order by
+      size: small
+
+    order.dir:
+      type: text
+      label: Order direction
+      size: small

@@ -1,0 +1,9 @@
+enabled: true                                                 # plugin enabled
+active: false                                                 # default zapier state
+template: zapier-feed.zrss.twig                               # TWIG template to use
+description: For Zapier RSS integration with other services   # Description
+limit: 20                                                     # Number of items to include
+length: 1000                                                  # Number of chars per item
+order:                                                        # Ordering of items
+  by: date
+  dir: desc

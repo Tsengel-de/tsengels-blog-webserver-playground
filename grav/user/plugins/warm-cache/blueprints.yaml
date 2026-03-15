@@ -1,0 +1,119 @@
+name: Warm Cache
+slug: warm-cache
+type: plugin
+premium: true
+version: 3.0.0
+description: Warms the cache by hitting all the pages in the sitemap
+icon: tachometer
+author:
+  name: Trilby Media, LLC
+  email: hello@trilby.media
+homepage: https://getgrav.org/premium/site-toolbox#warm-cache
+keywords: grav, warm, cache, clear
+bugs: https://github.com/getgrav/grav-premium-issues/issues?q=label:site-toolbox+label:warm-cache
+docs: https://getgrav.org/premium/site-toolbox/docs#warm-cache
+license: https://getgrav.org/premium/license
+
+dependencies:
+  - { name: grav, version: '>=1.7.24' }
+  - { name: sitemap, version: '>=3.0.0' }
+
+form:
+  validation: loose
+  fields:
+
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    enable_quicktray:
+      type: toggle
+      label: PLUGIN_WARM_CACHE.ENABLE_QUICKTRAY
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    quicktray_icon:
+      type: iconpicker
+      size: medium
+      label: PLUGIN_WARM_CACHE.QUICKTRAY_ICON
+      default: 'fa fa-tachometer'
+
+    on_cache_clear:
+      type: toggle
+      label: PLUGIN_WARM_CACHE.ON_CACHE_CLEAR
+      highlight: 0
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    show_count:
+      type: toggle
+      label: PLUGIN_WARM_CACHE.SHOW_COUNT
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+
+    log_results:
+      type: toggle
+      label: PLUGIN_WARM_CACHE.LOG_RESULTS
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    user_agent:
+      type: text
+      size: medium
+      label: PLUGIN_WARM_CACHE.USER_AGENT
+      placeholder: 'Grav Warm-Cache Plugin'
+
+    client_timeout:
+      type: number
+      label: PLUGIN_WARM_CACHE.CLIENT_TIMEOUT
+      help: PLUGIN_WARM_CACHE.CLIENT_TIMEOUT_HELP
+      size: x-small
+      append: Seconds
+      validate:
+        min: 1
+
+    client_connections:
+      type: number
+      label: PLUGIN_WARM_CACHE.CLIENT_CONNECTIONS
+      help: PLUGIN_WARM_CACHE.CLIENT_CONNECTIONS_HELP
+      size: x-small
+      validate:
+        min: 1
+        max: 25
+
+    client_request_type:
+      type: select
+      label: PLUGIN_WARM_CACHE.CLIENT_REQUEST_TYPE
+      help: PLUGIN_WARM_CACHE.CLIENT_REQUEST_TYPE_HELP
+      size: small
+      default: HEAD
+      options:
+        HEAD: HEAD
+        GET: GET
+
+

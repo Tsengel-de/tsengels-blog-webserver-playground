@@ -1,0 +1,20 @@
+[
+    {
+        "id": "cache-clear",
+        "executed_at": "2025-12-20T03:14:18+00:00",
+        "success": true,
+        "output": "Cleared:  \/home\/pi\/www\/grav\/cache\/twig\/*\nCleared:  \/home\/pi\/www\/grav\/cache\/doctrine\/*\nCleared:  \/home\/pi\/www\/grav\/cache\/compiled\/*\nCleared:  \/home\/pi\/www\/grav\/assets\/*\n\nTouched: \/home\/pi\/www\/grav\/user\/config\/system.yaml\n"
+    },
+    {
+        "id": "default-site-backup",
+        "executed_at": "2025-12-20T03:14:18+00:00",
+        "success": true,
+        "output": "\/home\/pi\/www\/grav\/backup\/default_site_backup--20251220030003.zip"
+    },
+    {
+        "id": "cache-purge",
+        "executed_at": "2025-12-20T04:00:03+00:00",
+        "success": true,
+        "output": "Purged 0 old cache items (files older than 30 days)"
+    }
+]

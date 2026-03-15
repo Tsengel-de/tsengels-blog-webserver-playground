@@ -1,0 +1,9 @@
+enabled: true
+active: false
+template: zapier-feed.zrss.twig
+description: 'For Zapier RSS integration with other services'
+limit: '20'
+length: '1000'
+order:
+  by: date
+  dir: desc

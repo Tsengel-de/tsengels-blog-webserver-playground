@@ -1,0 +1,14 @@
+enabled: true # lets you turn the plugin off and on.
+title:
+  append_site_title: false # lets you turn the plugin off and on for the "title" metadata.
+  separator: '|' # text that separates the page title from the site title in the "title" metadata.
+description:
+  enabled: true # lets you turn the plugin off and on for the "description" metadata.
+  length: 30 # maximal number of words that will be used to fill the "description" metadata.
+keywords:
+  enabled: true # lets you turn the plugin off and on for the "keywords" metadata.
+  length: 20 # maximal number of words that will be used to fill the "keywords" metadata.
+facebook:
+  enabled: true # Lets you turn the plugin ON and OFF for the "Facebook Open Graph" metadata.
+twitter:
+  enabled: true # Lets you turn the plugin ON and OFF for the "Twitter Cards" metadata.

@@ -1,0 +1,142 @@
+---
+title: Fotoalbum
+date: 2021-08-14 00:51
+taxonomy:
+  category:
+  - blog
+  tag:
+  - Urlaub
+  - Reisen
+hero_classes: text-dark title-h1h2 overlay-light hero-large parallax
+hero_image: 20210812_144556_1280.jpg
+blog_url: /blog
+show_sidebar: true
+show_breadcrumbs: true
+show_pagination: true
+subtitle: Reisen und Freizeit von Niibyul nach Dagebyul und zur Insel Foer
+feed:
+  limit: 10
+media_order: 20210812_144556_1280.jpg,20210810_133832.jpg,20210810_180538.jpg,20210810_193605.jpg,20210810_193621.jpg,20210810_193627.jpg,20210810_193631.jpg,20210810_193720.jpg,20210810_201049.jpg,20210810_201110.jpg,20210810_201346.jpg,20210811_082037.jpg,20210811_082100.jpg,20210811_131505.jpg,20210811_131521.jpg,20210811_132046.jpg,20210811_132048.jpg,20210811_132106.jpg,20210811_132107.jpg,20210811_132115.jpg,20210811_132124.jpg,20210811_140132.jpg,20210811_150820.jpg,20210811_150848.jpg,20210811_151612.jpg,20210811_151616.jpg,20210811_151619.jpg,20210811_151624.jpg,20210811_151630.jpg,20210811_153245.jpg,20210811_161453.jpg,20210811_161458.jpg,20210811_161507.jpg,20210811_164857.jpg,20210811_164929.jpg,20210811_164946.jpg,20210811_164954.jpg,20210811_165015.jpg,20210811_165032.jpg,20210811_165136.jpg,20210811_193223.jpg,20210812_100222.jpg,20210812_100327.jpg,20210812_100332.jpg,20210812_102119.jpg,20210812_104936.jpg,20210812_111044.jpg,20210812_114103.jpg,20210812_114108.jpg,20210812_114111.jpg,20210812_120455.jpg,20210812_123610.jpg,20210812_124429.jpg,20210812_124433.jpg,20210812_133509.jpg,20210812_133513.jpg,20210812_133609.jpg,20210812_134551.jpg,20210812_135257.jpg,20210812_135303.jpg,20210812_135307.jpg,20210812_135309.jpg,20210812_135313.jpg,20210812_142631.jpg,20210812_144556.jpg,20210812_152325.jpg,20210812_152335.jpg,20210812_152343.jpg,20210812_152348.jpg,20210812_152405.jpg,20210812_152437.jpg,20210812_152531.jpg,20210812_172648.jpg,20210813_002719.jpg
+process:
+  markdown: true
+  twig: true
+  html: true
+twig_first: false
+publish_date: 2021-08-14 00:51
+sitemap:
+  ignore: false
+  changefreq: daily
+  lastmod: 2024-08-11 20:47
+body_classes: header-dark header-transparent
+aura:
+  pagetype: article
+  description: Fotoalbum
+  image: 20210812_144556_1280.jpg
+metadata:
+  description: Fotoalbum
+  og:url: https://blog.tsengel.de/mn/blog/first-3-days-fotos
+  og:type: article
+  og:title: Fotogalerie | Tsengels-Blog
+  og:description: Fotoalbum
+  og:image: https://blog.tsengel.de/user/pages/02.blog/first-3-days-fotos/20210812_144556_1280.jpg
+  og:image:type: image/jpeg
+  og:image:width: 1024
+  og:image:height: 768
+  og:author: Tsengel😁
+  twitter:card: summary_large_image
+  twitter:title: Fotogalerie | Tsengels-Blog
+  twitter:description: Fotoalbum
+  twitter:site: '@@Bachka_Mongol'
+  twitter:creator: '@@Bachka_Mongol'
+  twitter:image: https://blog.tsengel.de/user/pages/02.blog/first-3-days-fotos/20210812_144556_1280.jpg
+  article:published_time: '2021-08-14T00:51:00+01:00'
+  article:modified_time: '2024-08-11T20:48:04+01:00'
+  article:author: Tsengel😁
+---
+
+
+Wie auch immer, ich habe mir heute etwas Zeit genommen und ein paar Fotos auf den Webserver verschoben, um sie auf eine Größe zu verkleinern, die ins Internet hochgeladen werden kann.
+> Genießen Sie hier Tsengels kurzes Fotoalbum der Nordsee 🤗
+
+===
+
+Die Beschreibung und Formatierung des Albums wurden korrigiert, soweit es die Zeit erlaubt😅🤓
+
+===
+
+[gallery]
+  ![](20210810_133832.jpg "")
+  ![](20210810_180538.jpg "")
+  ![](20210810_193605.jpg "")
+  ![](20210810_193621.jpg "")
+  ![](20210810_193627.jpg "")
+  ![](20210810_193631.jpg "")
+  ![](20210810_193720.jpg "")
+  ![](20210810_201049.jpg "")
+  ![](20210810_201110.jpg "")
+  ![](20210810_201346.jpg "")
+  ![](20210811_082037.jpg "")
+  ![](20210811_082100.jpg "")
+  ![](20210811_131505.jpg "")
+  ![](20210811_131521.jpg "")
+  ![](20210811_132046.jpg "")
+  ![](20210811_132048.jpg "")
+  ![](20210811_132106.jpg "")
+  ![](20210811_132107.jpg "")
+  ![](20210811_132115.jpg "")
+  ![](20210811_132124.jpg "")
+  ![](20210811_140132.jpg "")
+  ![](20210811_150820.jpg "")
+  ![](20210811_150848.jpg "")
+  ![](20210811_151612.jpg "")
+  ![](20210811_151616.jpg "")
+  ![](20210811_151619.jpg "")
+  ![](20210811_151624.jpg "")
+  ![](20210811_151630.jpg "")
+  ![](20210811_153245.jpg "")
+  ![](20210811_161453.jpg "")
+  ![](20210811_161458.jpg "")
+  ![](20210811_161507.jpg "")
+  ![](20210811_164857.jpg "")
+  ![](20210811_164929.jpg "")
+  ![](20210811_164946.jpg "")
+  ![](20210811_164954.jpg "")
+  ![](20210811_165015.jpg "")
+  ![](20210811_165032.jpg "")
+  ![](20210811_165136.jpg "")
+  ![](20210811_193223.jpg "")
+  ![](20210812_100222.jpg "")
+  ![](20210812_100327.jpg "")
+  ![](20210812_100332.jpg "")
+  ![](20210812_102119.jpg "")
+  ![](20210812_104936.jpg "")
+  ![](20210812_111044.jpg "")
+  ![](20210812_114103.jpg "")
+  ![](20210812_114108.jpg "")
+  ![](20210812_114111.jpg "")
+  ![](20210812_120455.jpg "")
+  ![](20210812_123610.jpg "")
+  ![](20210812_124429.jpg "")
+  ![](20210812_124433.jpg "")
+  ![](20210812_133509.jpg "")
+  ![](20210812_133513.jpg "")
+  ![](20210812_133609.jpg "")
+  ![](20210812_134551.jpg "")
+  ![](20210812_135257.jpg "")
+  ![](20210812_135303.jpg "")
+  ![](20210812_135307.jpg "")
+  ![](20210812_135309.jpg "")
+  ![](20210812_135313.jpg "")
+  ![](20210812_142631.jpg "")
+  ![](20210812_144556_1280.jpg "")
+  ![](20210812_144556.jpg "")
+  ![](20210812_152325.jpg "")
+  ![](20210812_152335.jpg "")
+  ![](20210812_152343.jpg "")
+  ![](20210812_152348.jpg "")
+  ![](20210812_152405.jpg "")
+  ![](20210812_152437.jpg "")
+  ![](20210812_152531.jpg "")
+  ![](20210812_172648.jpg "")
+  ![](20210813_002719.jpg "")
+[/gallery]

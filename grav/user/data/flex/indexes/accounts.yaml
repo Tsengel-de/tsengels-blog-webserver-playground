@@ -1,0 +1,14 @@
+version: '1.2'
+timestamp: 1723211742
+count: 2
+index:
+  bachka:
+    storage_key: bachka
+    storage_timestamp: 1723211742
+    key: bachka
+    email: tsengel@tsengel.de
+  tsengel:
+    storage_key: tsengel
+    storage_timestamp: 1723211334
+    key: tsengel
+    email: tsengel.de@gmail.com

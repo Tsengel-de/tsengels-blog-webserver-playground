@@ -1,0 +1,24 @@
+enabled: true
+production-mode: true
+grid-size: grid-xl
+header-fixed: true
+header-animated: true
+header-dark: false
+header-transparent: false
+sticky-footer: true
+blog-page: /blog
+spectre:
+  exp: false
+  icons: false
+custom_logo:
+  user/themes/quark/images/logo/grav-logo-bachka.svg:
+    name: grav-logo-bachka.svg
+    type: image/svg+xml
+    size: 4001
+    path: user/themes/quark/images/logo/grav-logo-bachka.svg
+custom_logo_mobile:
+  user/themes/quark/images/logo/grav-logo-bachka.svg:
+    name: grav-logo-bachka.svg
+    type: image/svg+xml
+    size: 4001
+    path: user/themes/quark/images/logo/grav-logo-bachka.svg

@@ -1,0 +1,15 @@
+banner_title: 'Cookies fetzen!'
+banner_cat_title: 'Ihr persönlicher Cookie Banner Manager'
+banner_text: 'Diese Website speichert Daten wie Cookies, um die erforderlichen Funktionen der Website zu aktivieren, einschließlich Analyse, Targeting und Personalisierung. Sie können Ihre Einstellungen jederzeit ändern oder die Standardeinstellungen übernehmen.'
+button_accept_text: 'Na klar. Akzeptieren & starten'
+button_accept_layout: layout-2
+button_settings_active: activated
+button_settings_text: Einstellungen
+button_settings_layout: layout-1
+button_settings_empty: 'Es sind keine Einstellungen verfügbar.'
+button_deny_active: activated
+button_deny_text: 'Nur notwendige'
+button_deny_layout: layout-1
+banner_revokable_text: 'Reset Cookie Settings'
+button_revokable_color: '#7faf34'
+button_revokable_text_color: '#ffffff'

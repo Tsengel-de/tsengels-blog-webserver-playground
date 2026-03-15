@@ -1,0 +1,24 @@
+title: 'Tsengels Blog'
+default_lang: mn
+author:
+  name: Tsengel
+  email: tsengel@tsengel.de
+taxonomies:
+  - category
+  - tag
+  - month
+metadata:
+  Description: 'Tsengel, Tsengels Blog, Blog Tsengel, Tsengel Cloud, curios one, Цэнгэл, Цэнгэлийн блог, Блог Цэнгэл, Цэнгэл үүлэн дээр'
+  Тайлбар: 'Цэнгэл, Цэнгэлийн Блог, Блог Цэнгэл, Үүлэн дээр үйлдвэр, '
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+redirects:
+  /changelog: /blog/the-urban-jungle
+routes:
+  /something/else: /blog/focus-and-blur
+  '/another/one/(.*)': /blog/$1
+blog:
+  route: ''

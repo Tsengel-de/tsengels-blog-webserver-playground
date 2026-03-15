@@ -1,0 +1,22 @@
+enabled: true
+enable_quicktray: true
+on_cache_clear: false
+quicktray_icon: 'fa fa-tachometer'
+show_count: true
+log_results: false
+user_agent: 'Grav Warm-Cache Plugin'
+client_timeout: 30
+client_connections: 1
+client_request_type: GET
+batch_size: 25
+delay_between_requests: 50
+delay_between_batches: 500
+max_retries: 2
+continue_on_error: true
+memory_limit: '256M'
+progress_interval: 10
+save_failed_urls: true
+failed_urls_file: 'user://data/warm-cache-failed.json'
+
+
+

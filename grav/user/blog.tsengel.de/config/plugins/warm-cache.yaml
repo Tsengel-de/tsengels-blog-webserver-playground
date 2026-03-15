@@ -1,0 +1,10 @@
+enabled: true
+enable_quicktray: true
+on_cache_clear: false
+quicktray_icon: 'fa fa-tachometer'
+show_count: '0'
+log_results: true
+user_agent: 'Grav Warm-Cache Plugin'
+client_timeout: 30
+client_connections: 5
+client_request_type: HEAD

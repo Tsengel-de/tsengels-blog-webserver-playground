@@ -1,0 +1,24 @@
+{
+  "name": "typhoon-theme",
+  "repository": "",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "resolve-sources": "node scripts/resolve-sources.js",
+    "dev": "npm run resolve-sources && npx @tailwindcss/cli -i ./css/site.css -o ./build/css/site.css --watch --minify --verbose",
+    "prod": "npm run resolve-sources && NODE_ENV=production npx @tailwindcss/cli -i ./css/site.css -o ./build/css/site.css --minify"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.1",
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/typography": "^0.5",
+    "@tailwindcss/vite": "^4.2.1",
+    "alpinejs": "^3.15.8"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.27",
+    "tailwindcss": "^4.2.1"
+  }
+}

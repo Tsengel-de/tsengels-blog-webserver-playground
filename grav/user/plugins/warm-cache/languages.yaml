@@ -1,0 +1,20 @@
+en:
+  PLUGIN_WARM_CACHE:
+    ENABLE_QUICKTRAY: 'Enable Quicktray'
+    QUICKTRAY_TOOLTIP: 'Warms the cache'
+    ON_CACHE_CLEAR: 'onCacheClear Event'
+    SHOW_COUNT: 'Show Count in Results'
+    LOG_RESULTS: 'Log Results'
+    USER_AGENT: 'User Agent'
+    QUICKTRAY_ICON: 'Quicktray Icon'
+    INSUFFICIENT_PERMS: 'Insufficient permissions to warm cache.'
+    SUCCESS_MESSAGE: "Cache %s successfully warmed"
+    INVALID_SITEMAP: "Sitemap URL does not exist: %s. Is sitemap plugin installed and enabled?"
+    WARM_NOTICE: "warmed %1$s (%2$s)"
+    NOT_JSON_URL: "Sitemap URL extension is invalid.  It should end in .json, your URL ended in .%s"
+    CLIENT_TIMEOUT: "Client Timeout"
+    CLIENT_TIMEOUT_HELP: "How long to wait before timing out when crawling pages"
+    CLIENT_CONNECTIONS: "Client Connections"
+    CLIENT_CONNECTIONS_HELP: "The number of concurrent connections the HTTPClient can use"
+    CLIENT_REQUEST_TYPE: "Client Request Type"
+    CLIENT_REQUEST_TYPE_HELP: "HEAD is faster as it doesn't retrieve body, use GET if your webserver doesn't support HEAD"

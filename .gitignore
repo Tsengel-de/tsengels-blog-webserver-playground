@@ -6,3 +6,14 @@ ddns-and-webserver/*.txt
 .idea
 
 *.txt
+
+# Ignore everything in the Grav installation
+grav/*
+
+# EXCEPT the user folder
+!grav/user/
+
+# Still exclude sensitive/temp files inside the user folder
+grav/user/accounts/
+grav/user/config/security.yaml
+

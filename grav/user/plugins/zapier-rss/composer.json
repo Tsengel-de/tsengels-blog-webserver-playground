@@ -1,0 +1,29 @@
+{
+  "name": "trilbymedia/zapier-rss",
+  "type": "grav-plugin",
+  "description": "Plugin to integrate Zapier with Grav via customized RSS feeds",
+  "keywords": ["plugin"],
+  "homepage": "https://github.com/trilbymedia/grav-plugin-zapier-rss",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Trilby Media, LLC",
+      "email": "hello@trilby.media",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Grav\\Plugin\\ZapierRSS\\": "classes/"
+    },
+    "classmap":  ["zapier-rss.php"]
+  },
+  "config": {
+    "platform": {
+      "php": "7.1.3"
+    }
+  }
+}

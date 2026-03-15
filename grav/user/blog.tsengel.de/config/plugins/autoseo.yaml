@@ -1,0 +1,14 @@
+enabled: false
+title:
+  append_site_title: true
+  separator: '|'
+description:
+  enabled: true
+  length: 30
+keywords:
+  enabled: true
+  length: 20
+facebook:
+  enabled: true
+twitter:
+  enabled: true

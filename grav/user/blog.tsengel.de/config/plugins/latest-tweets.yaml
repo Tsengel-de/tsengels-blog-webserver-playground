@@ -1,0 +1,12 @@
+enabled: true
+twitter_id: '@Bachka_Mongol'
+tweets_to_display: 5
+ignore_replies: '1'
+include_rts: '1'
+consumerkey: a9IuX0JONIk3I1a5w6LsUYVYi
+consumersecret: tG7ypnCFEKRFI5Nu50ZDjVvywZae5u7i7wd9To3uJ4fd8Blh2t
+accesstoken: 899666708478271492-h4mbOFd2BuLjXh6VsYMS8Z9amDm2uqb
+accesstokensecret: QbmTjGx7IR1zmRLOXwaFPZI99736PYwjZJQqkwnRNjpz1
+built_in_css: '1'
+fontawesome: '1'
+read_more: 'Read More...'

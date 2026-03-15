@@ -1,0 +1,102 @@
+[x-cloak] {
+    @apply hidden;
+}
+
+.site-logo {
+  img, svg {
+    @apply h-full;
+  }
+}
+
+/** Prose fixes **/
+.prose {
+  @apply max-w-none;
+
+  a {
+    @apply transition duration-300 text-primary no-underline;
+
+    &:hover {
+      @apply text-primary-darker dark:text-primary-lighter;
+    }
+  }
+
+  .no-prose {
+    a {
+      @apply transition-none;
+    }
+    p {
+      @apply m-[initial];
+    }
+  }
+
+  .btn, .button, a.btn, a.button {
+    @apply px-4 lg:px-8 py-3 leading-6 font-medium rounded-md text-gray-100 hover:text-white bg-primary filter hover:brightness-90 transition duration-300 ease-in-out inline-flex;
+  }
+  & > ul > li {
+    & > *:last-child {
+      @apply m-inherit;
+    }
+  }
+  ul > li:before {
+    @apply bg-gray-500;
+  }
+
+  ol > li:before {
+    @apply text-gray-500;
+  }
+  ul.archives > li {
+    @apply pl-0;
+  }
+
+  code {
+    @apply dark:text-primary;
+  }
+
+  pre {
+    @apply dark:bg-blue-200/5 dark:text-blue-200;
+  }
+
+  pre code {
+    @apply dark:bg-transparent;
+  }
+
+  blockquote {
+    @apply dark:border-gray-700 dark:text-gray-300;
+  }
+
+  hr {
+    @apply dark:border-gray-700;
+  }
+
+  .social svg.brands {
+    path, rect {
+      @apply fill-current text-gray-800;
+    }
+  }
+}
+
+/** Blog sidebar **/
+#sidebar {
+    .sidebar-content {
+        @apply mb-6;
+    }
+}
+
+/** Menu open/close **/
+.menu-visible {
+  @apply opacity-100 block;
+}
+
+.theme-chooser {
+  .form-select {
+    @apply border-0 w-auto pr-8 bg-transparent;
+  }
+}
+
+/* Social Styles */
+.social svg.brands {
+  path, rect {
+    @apply fill-current text-gray-100;
+  }
+}
+

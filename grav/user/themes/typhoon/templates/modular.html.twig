@@ -1,0 +1,18 @@
+{% set onpage_menu_enabled = header.onpage_menu == true %}
+{% set onpage_menu_replace = header.onpage_menu_replace ?? true %}
+{% set show_onpage_menu = onpage_menu_enabled and onpage_menu_replace %}
+{% set show_scrollspy_menu = onpage_menu_enabled and not onpage_menu_replace %}
+
+{% extends 'partials/base.html.twig' %}
+
+{% block hero %}
+  {% for module in page.collection()|filter(module => module.template == 'modular/hero') %}
+    {{ module.content|raw }}
+  {% endfor %}
+{% endblock %}
+
+{% block content_surround %}
+  {% for module in page.collection()|filter(module => module.template != 'modular/hero') %}
+    {{ module.content|raw }}
+  {% endfor %}
+{% endblock %}
