@@ -54,4 +54,4 @@ echo "$commands"
 echo "---------------------------------------------------"
 
 # Execute via SSH
-ssh -i /home/bachka/.ssh/tsengel_everywhere admin@$ROUTER_IP "$commands"
+ssh -i /home/pi/.ssh/bachka_automation -o StrictHostKeyChecking=accept-new admin@$ROUTER_IP "$commands"

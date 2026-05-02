@@ -16,12 +16,8 @@ fi
 
 ROUTER_IP="192.168.88.1"
 ROUTER_PUB_KEY="0CVFhXtS38yWMFynMmKfsmKt7HvMi0RLIXf1Y5w/ISk="
-SSH_KEY="/home/bachka/.ssh/tsengel_everywhere"
-
-echo "➡️ Adding Peer '$CLIENT_NAME' onto MikroTik for Virtual IP $VPN_INTERNAL_IP..."
-
 # 1. Add peer configuration on MikroTik via SSH
-ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no admin@"$ROUTER_IP" "
+ssh -i /home/pi/.ssh/bachka_automation -o StrictHostKeyChecking=accept-new admin@"$ROUTER_IP" "
 /interface wireguard peers add interface=wireguard-vpn public-key=\"$PUB_KEY\" allowed-address=\"$VPN_INTERNAL_IP/32\" comment=\"$CLIENT_NAME\"
 "
 
