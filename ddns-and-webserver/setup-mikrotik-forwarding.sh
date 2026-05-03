@@ -14,8 +14,8 @@ else
     echo "Warning: Credentials file not found. Ensure ROUTER_IP is set."
 fi
 
-CLUSTER_ENTRY="192.168.88.150"
-CLUSTER_PORT="8443"
+CLUSTER_ENTRY="192.168.88.210"
+CLUSTER_PORT="443"
 
 echo "Configuring MikroTik router at $ROUTER_IP..."
 
