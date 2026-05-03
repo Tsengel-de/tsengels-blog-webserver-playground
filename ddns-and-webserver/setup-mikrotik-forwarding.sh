@@ -1,7 +1,7 @@
 #!/bin/bash
 # Setup MikroTik Port Forwarding & Hairpin NAT for Pi Cluster
-# Purpose: Enable External (WAN) and Internal (WiFi) access to Cluster on Port 8443
-# Target: 192.168.88.150:8443 (Which forwards to Ingress)
+# Purpose: Enable External (WAN) and Internal (WiFi) access to Cluster on Port 443
+# Target: 192.168.88.210:443 (Which forwards to Ingress)
 
 set -e
 
@@ -24,7 +24,7 @@ commands=$(cat <<EOF
 # 1. Clean old rules
 /ip firewall nat remove [find comment="Pi-Cluster-HTTPS"]
 /ip firewall nat remove [find comment="Hairpin-NAT-Cluster"]
-/ip firewall filter remove [find comment="Allow-Cluster-8443"]
+/ip firewall filter remove [find comment="Allow-Cluster-443"]
 
 # 2. Port Forwarding (WAN Access)
 /ip firewall nat add chain=dstnat action=dst-nat \
@@ -39,9 +39,9 @@ commands=$(cat <<EOF
   action=masquerade comment="Hairpin-NAT-Cluster"
 
 # 4. Firewall Filter (Allow Traffic)
-# Allow TCP 8443 through the firewall
+# Allow TCP 443 through the firewall
 /ip firewall filter add chain=forward protocol=tcp dst-port=$CLUSTER_PORT \
-  action=accept comment="Allow-Cluster-8443" place-before=1
+  action=accept comment="Allow-Cluster-443" place-before=1
 
 # 5. Verify
 /ip firewall nat print where comment~"Cluster"
@@ -54,4 +54,4 @@ echo "$commands"
 echo "---------------------------------------------------"
 
 # Execute via SSH
-ssh -i /home/pi/.ssh/bachka_automation -o StrictHostKeyChecking=accept-new admin@$ROUTER_IP "$commands"
+ssh -i /home/tsengel/.ssh/bachka_automation -o StrictHostKeyChecking=accept-new admin@$ROUTER_IP "$commands"
