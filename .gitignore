@@ -17,3 +17,6 @@ grav/*
 grav/user/accounts/
 grav/user/config/security.yaml
 
+# Ignore backups and large archives
+grav.tar.gz
+

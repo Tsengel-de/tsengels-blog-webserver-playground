@@ -1,0 +1,14 @@
+version: '3'
+services:
+  grav:
+    image: lscr.io/linuxserver/grav:latest
+    container_name: grav-blog
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Berlin
+    volumes:
+      - ./grav:/config/www
+    ports:
+      - "[2a01:598:d08e:32b9:14b2:2558:265a:43ae]:80:80"
+    restart: unless-stopped
